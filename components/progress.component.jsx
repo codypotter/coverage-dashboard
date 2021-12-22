@@ -1,11 +1,15 @@
-import { Space, Progress as AntdProgress } from 'antd';
+import { Row, Col, Space, Progress as AntdProgress } from 'antd';
 
 const Progress = ({title, percent}) => (
     <>
-        <Space>
-            <span>{title}</span>
-            <AntdProgress percent={percent} size="small" style={{width: 170}} />
-        </Space>
+        <Row justify="space-between" style={{width: "97%"}}>
+            <Col>
+                {title}
+            </Col>
+            <Col>
+                <AntdProgress percent={percent} style={{width: "300px"}} />
+            </Col>
+        </Row>
     </>
 )
 
