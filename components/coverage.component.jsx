@@ -2,7 +2,7 @@ import { Result, Collapse } from 'antd'
 
 const { Panel } = Collapse
 import TargetCoverage from './target-coverage.component'
-import Progress from './progress.component'
+import PanelContent from './panel-content.component'
 
 const Coverage = ({data}) => (
     <>
@@ -17,7 +17,7 @@ const Coverage = ({data}) => (
         <Collapse>
             {
                 data.targets.map((target) => (
-                    <Panel header={<Progress title={target.name} percent={(target.lineCoverage * 100).toFixed(2)}/>} key={target.name}>
+                    <Panel header={<PanelContent type="target" title={target.name} percent={(target.lineCoverage * 100).toFixed(2)}/>} key={target.name}>
                         <TargetCoverage target={target}/>
                     </Panel>
                 ))

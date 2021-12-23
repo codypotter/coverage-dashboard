@@ -1,16 +1,14 @@
 import Head from 'next/head'
 import { useState } from 'react'
-import { PageHeader, Collapse, Row, Col, Divider, Typography, Layout ,Input } from 'antd'
+import { PageHeader, Row, Col, Divider, Layout ,Input } from 'antd'
 import Coverage from '../components/coverage.component'
 
 const { Header, Footer, Content } = Layout
-const { Title } = Typography
-const { Panel } = Collapse
 
 import 'antd/dist/antd.dark.css'
 import UploadSteps from "../components/upload-steps.component";
 
-export default function Home(props) {
+export default function Home() {
   const [coverageData, setCoverageData] = useState(null);
 
   const downloadToClient = async (event) => {

@@ -1,5 +1,5 @@
 import {Collapse, Descriptions, Space} from 'antd'
-import Progress from './progress.component'
+import PanelContent from './panel-content.component'
 import FuncCoverage from './func-coverage.component'
 
 const { Panel } = Collapse
@@ -15,7 +15,9 @@ const FileCoverage = ({file}) => (
         <Collapse>
             {
                 file.functions.map((func) => (
-                    <Panel header={<Progress percent={(func.lineCoverage * 100).toFixed(2)} title={func.name}/>} key={func.name}>
+                    <Panel type="function"
+                           header={<PanelContent percent={(func.lineCoverage * 100).toFixed(2)} title={func.name}/>}
+                           key={func.name}>
                         <FuncCoverage func={func} />
                     </Panel>
                 ))

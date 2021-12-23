@@ -1,5 +1,5 @@
-import { Collapse, Space, Descriptions } from 'antd'
-import Progress from './progress.component'
+import { Collapse, Descriptions } from 'antd'
+import PanelContent from './panel-content.component'
 import FileCoverage from './file-coverage.component'
 
 const { Panel } = Collapse
@@ -15,8 +15,9 @@ const TargetCoverage = ({target}) => (
         <Collapse>
             {
                 target.files.map((file) => (
-                    <Panel header={<Progress percent={(file.lineCoverage * 100).toFixed(2)}
-                                             title={file.name}/>}
+                    <Panel header={<PanelContent type="file"
+                                                 percent={(file.lineCoverage * 100).toFixed(2)}
+                                                 title={file.name}/>}
                            key={file.name}>
                         <FileCoverage file={file} />
                     </Panel>
