@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import { useState } from 'react'
-import { PageHeader, Row, Col, Divider, Layout ,Input } from 'antd'
+import { PageHeader, BackTop, Row, Col, Divider, Layout ,Input } from 'antd'
 import Coverage from '../components/coverage.component'
 
-const { Header, Footer, Content } = Layout
+const { Footer, Content } = Layout
 
 import 'antd/dist/antd.dark.css'
 import UploadSteps from "../components/upload-steps.component";
@@ -23,20 +23,18 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <div style={{minHeight: "100%"}}>
       <Head>
         <title>Coverage Report</title>
         <meta name="description" content="Code coverage report dashboard" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <BackTop />
       <Layout hasSider={false}>
-        <Header>
-          <PageHeader
-            backIcon={false}
-            title="Xcode Coverage Dashboard"
-          />
-
-        </Header>
+        <PageHeader
+          backIcon={false}
+          title="iOS Code Coverage Dashboard"
+        />
         <Content>
           <Row justify="center" style={{marginTop: "16px"}}>
             <Col>
