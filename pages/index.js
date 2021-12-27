@@ -33,7 +33,7 @@ export default function Home() {
       <Layout hasSider={false}>
         <PageHeader
           backIcon={false}
-          title="iOS Code Coverage Dashboard"
+          title="Xcode Code Coverage Dashboard"
         />
         <Content>
           <Row justify="center" style={{
