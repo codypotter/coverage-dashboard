@@ -9,8 +9,12 @@ const Coverage = ({data}) => (
         <Result
             status={data.lineCoverage > 0.60 ? "success" : "warning" }
             title={`Your project coverage is ${(data.lineCoverage * 100).toFixed(2)}%`}
+            style={{
+                marginBottom: 64,
+                marginTop: 64
+            }}
         />
-        <Descriptions  title="Coverage Details" bordered style={{marginBottom: 16}}>
+        <Descriptions  title="Coverage Details" bordered style={{marginBottom: 64}}>
             <Descriptions.Item label="Total executable lines" span={1}>{data.executableLines}</Descriptions.Item>
             <Descriptions.Item label="Lines hit" span={1}>{data.coveredLines}</Descriptions.Item>
         </Descriptions>

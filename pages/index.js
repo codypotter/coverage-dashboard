@@ -36,7 +36,10 @@ export default function Home() {
           title="iOS Code Coverage Dashboard"
         />
         <Content>
-          <Row justify="center" style={{marginTop: "16px"}}>
+          <Row justify="center" style={{
+            marginTop: 64,
+            marginBottom: 64
+          }}>
             <Col>
               <label htmlFor='coverageData'>Choose a coverage JSON file:</label>
               <Input name='coverageData' type='file' onChange={downloadToClient} />

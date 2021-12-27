@@ -6,7 +6,7 @@ const { Panel } = Collapse
 
 const TargetCoverage = ({target}) => (
     <>
-        <Descriptions  title="Target Info" bordered style={{marginBottom: 16}}>
+        <Descriptions  title="Target Info" bordered style={{marginBottom: 64}}>
             <Descriptions.Item label="Build path" span={3}>{target.buildProductPath}</Descriptions.Item>
             <Descriptions.Item label="Total executable lines" span={2}>{target.executableLines}</Descriptions.Item>
             <Descriptions.Item label="Lines hit" span={1}>{target.coveredLines}</Descriptions.Item>
